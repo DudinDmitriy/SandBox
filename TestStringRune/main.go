@@ -18,11 +18,16 @@ func changestr(a, b []int) bool {
 	len_b := len(b)
 	i_a := 0
 	i_b := 0
-	if len_a == len_b && len(a)==0 {
+	
+	if a == nil && b==nil {
 		return false
 	}
 
-	if len_a == 0 && len_b > 0 || len_b == 0 && len_a > 0 {
+	if len_a == 0 && len_b==0 {
+		return true
+	}
+
+	if len_a == 0  || len_b == 0 {
 		return false
 	}
 
@@ -73,23 +78,6 @@ func main() {
 	// a = [121, 144, 19, 161, 19, 144, 19, 11]  
 	// b = [132, 14641, 20736, 361, 25921, 361, 20736, 361]
 	var a,b []int
-	a = []int{121, 144, 19, 161, 19, 144, 19, 11}
-	b = []int{131, 14641, 20736, 361, 25921, 361, 20736, 361}
-	fmt.Println(a)
-	fmt.Println(b)
-	fmt.Printf("result: %s \n",changestr(a,b))
-
-	a = []int{121, 144, 19, 161, 19, 144, 19,19,1,1}
-	b = []int{121, 14641, 20736, 361, 25921, 361, 20736, 361}
-	fmt.Println(a)
-	fmt.Println(b)
-	fmt.Printf("result: %s \n",changestr(a,b))
-
-	a = []int{121, 144, 19, 161, 19, 144, 19, 11,11}
-	b = []int{ 121, 14641, 20736, 361, 25921,  361, 20736, 361}
-	fmt.Println(a)
-	fmt.Println(b)
-	fmt.Printf("result: %s \n",changestr(a,b))
 
 	a = nil
 	b = []int{121, 14641, 20736, 361, 25921, 361, 20736, 361}
@@ -97,14 +85,26 @@ func main() {
 	fmt.Println(b)
 	fmt.Printf("result: %s \n",changestr(a,b))
 
-	a = nil
-	b = []int{121, 14641, 20736, 361, 25921, 361, 20736, 361}
+	a = []int{-12, -0 }
+	b = []int{0, 0,-144 }
 	fmt.Println(a)
 	fmt.Println(b)
 	fmt.Printf("result: %s \n",changestr(a,b))
 
-	a = []int{-5,3,6,-7}
-	b = []int{25,49,9,36,-36}
+	a = []int{7,6,-7,7}
+	b = []int{36,49,9,9,36}
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Printf("result: %s \n",changestr(a,b))
+
+	a = []int{}
+	b = []int{}
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Printf("result: %s \n",changestr(a,b))
+
+	a = nil
+	b = nil
 	fmt.Println(a)
 	fmt.Println(b)
 	fmt.Printf("result: %s \n",changestr(a,b))
