@@ -25,7 +25,7 @@ func main() {
 	pathdir := "D:\\Develop\\GoLang\\src\\SandBox\\TestOsFunc"
 	//pathdir = "testdatastatic"
 	strres := makestring("", pathdir)
-	fmt.Println(strres)
+	//fmt.Println(strres)
 }
 
 func makestring(pref string, pathdir string) (res string) {
@@ -58,12 +58,12 @@ func makestring(pref string, pathdir string) (res string) {
 			res = res + fmt.Sprintf(pref1+"%s\n", fi[el].Name())
 			res = res + makestring(pref2, pathdir+string(os.PathSeparator)+fi[el].Name())
 		} else {
-			sizefile:=fi[el].Size()
-			strsizefile:="(empty)"
-			if sizefile != 0{
-				strsizefile = fmt.Sprintf("(%db)",sizefile)
+			sizefile := fi[el].Size()
+			strsizefile := "(empty)"
+			if sizefile != 0 {
+				strsizefile = fmt.Sprintf("(%db)", sizefile)
 			}
-			res = res + fmt.Sprintf(pref1+"%s %s\n", fi[el].Name(),strsizefile)
+			res = res + fmt.Sprintf(pref1+"%s %s\n", fi[el].Name(), strsizefile)
 		}
 	}
 	return
