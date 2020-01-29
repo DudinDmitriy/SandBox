@@ -27,8 +27,6 @@ func main() {
 	strres := makestring("", pathdir)
 	//fmt.Println(strres)
 	//fmt.Println(strres)
-	//fmt.Println(strres)
-	//fmt.Println(strres)
 }
 
 func makestring(pref string, pathdir string) (res string) {
