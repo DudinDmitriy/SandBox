@@ -26,9 +26,9 @@ func main() {
 	//pathdir = "testdatastatic"
 	strres := makestring("", pathdir)
 	//fmt.Println(strres)
-	//fmt.Println(strres)
-	//fmt.Println(strres)
-	//fmt.Println(strres)
+	//fmt.Println(strres) dsfwer
+	//fmt.Println(strres) sdfsdf
+	//fmt.Println(strres) sdfsdfs
 }
 
 func makestring(pref string, pathdir string) (res string) {
