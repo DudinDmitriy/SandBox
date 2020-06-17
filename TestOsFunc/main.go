@@ -22,10 +22,11 @@ func (mFI myFileInfo) Swap(i, j int) {
 
 func main() {
 	//pathdir := "testdata"
-	pathdir := "D:\\Develop\\GoLang\\src\\SandBox\\TestOsFunc"
+	pathdir := "D:\\Develop\\GoLang\\src\\SandBox\\TestOsFunc\\test"
 	//pathdir = "testdatastatic"
 	strres := makestring("", pathdir)
 	//fmt.Println(strres)
+	//fmt.Println(strres) dsfwer
 	//fmt.Println(strres) dsfwer
 	//fmt.Println(strres) sdfsdf
 	//fmt.Println(strres) sdfsdfs
@@ -67,6 +68,7 @@ func makestring(pref string, pathdir string) (res string) {
 				strsizefile = fmt.Sprintf("(%db)", sizefile)
 			}
 			res = res + fmt.Sprintf(pref1+"%s %s\n", fi[el].Name(), strsizefile)
+
 		}
 	}
 	return
