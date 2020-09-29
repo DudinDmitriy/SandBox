@@ -21,15 +21,9 @@ func (mFI myFileInfo) Swap(i, j int) {
 }
 
 func main() {
-	//pathdir := "testdata"
-	pathdir := "D:\\Develop\\GoLang\\src\\SandBox\\TestOsFunc\\test"
-	//pathdir = "testdatastatic"
-	strres := makestring("", pathdir)
-	//fmt.Println(strres)
-	//fmt.Println(strres) dsfwer
-	//fmt.Println(strres) dsfwer
-	//fmt.Println(strres) sdfsdf
-	//fmt.Println(strres) sdfsdfs
+	pathdir := "D:\\Go\\src\\SandBox\\TestOsFunc\\testdata"
+	res := makestring("", pathdir)
+	fmt.Printf(res)
 }
 
 func makestring(pref string, pathdir string) (res string) {

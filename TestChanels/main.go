@@ -11,9 +11,9 @@ func main() {
 	var wg1 sync.WaitGroup
 	//ss := []int{1, 2, 3, 4, 5, 6, 7, 13, 11, 8, 9}
 	ss := []int{11, 8, 9}
-	in1 := make(chan interface{},2)
-	out1 := make(chan interface{},2)
-	out2 := make(chan interface{},2)
+	in1 := make(chan interface{}, 2)
+	out1 := make(chan interface{}, 2)
+	out2 := make(chan interface{}, 2)
 
 	go func() {
 		for i := range ss {
@@ -44,12 +44,12 @@ func main() {
 		readch := false
 		for !end {
 			select {
-			case val,more:=<-ch1:
-				if more{
-				readch = true
-				ch1<-val
-				time.Sleep(time.Millisecond * 10)
-				}else{
+			case val, more := <-ch1:
+				if more {
+					readch = true
+					ch1 <- val
+					time.Sleep(time.Millisecond * 10)
+				} else {
 					end = true
 				}
 			default:
